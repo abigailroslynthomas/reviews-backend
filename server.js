@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const { connectDB, sequelize } = require("./config/database");
-const { User, Item, Review } = require("./models"); // ✅ FIXED IMPORT
+const { User, Item, Review } = require("./models"); 
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -59,7 +59,7 @@ app.post("/api/items/:itemId/reviews", async (req, res) => {
 });
 
 connectDB();
-const PORT = process.env.PORT || 5000; // ✅ Use environment variable or default to 5001
+const PORT = process.env.PORT || 5000; 
 app.listen(PORT, async () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

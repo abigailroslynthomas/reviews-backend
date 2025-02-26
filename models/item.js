@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   const Item = sequelize.define("Item", {
-    itemid: { // ✅ Ensure primary key is correct
+    itemid: { 
       type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
